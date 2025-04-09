@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <Folder Include="Controller\" />
+    <Folder Include="ModelDTO\" />
     <Folder Include="SignalR\" />
   </ItemGroup>
 

@@ -9,7 +9,7 @@
     }
   },
     "profiles": {
-        "front-end": {
+        "signalR-client": {
             "commandName": "Project",
             "dotnetRunMessages": true,
             "launchBrowser": true,

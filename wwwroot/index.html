@@ -16,7 +16,7 @@
         }
 
         #chat-messages {
-            height: 600px;
+            height: 700px;
             background: #efefef;
             overflow: auto;
             padding: 10px;
@@ -26,15 +26,11 @@
         .message {
             padding: 10px;
             border-radius: 5px;
+            margin: auto;
             margin-bottom: 10px;
             background: #dfdfdf;
-            max-width: 55%;
+            max-width: 95%;
         }
-
-            .message.self {
-                margin-left: auto;
-                background: #cfcfcf;
-            }
 
             .message:last-child {
                 border-bottom: none;
@@ -51,7 +47,8 @@
     </style>
 </head>
 <body>
-    <h1>Chat</h1>
+    <h1>Travel Plans</h1>
+    <a href="/swagger/index.html" target="_blank">Open Swagger in new Tab</a>
     <div class="chat">
         <div id="chat-messages"></div>
     </div>
@@ -73,6 +70,8 @@
             // TODO: open signalR connection
 
             // TODO: use addMessage(message) to add new messages to the chat interface
+
+            // TODO: dont forget to start the connection!
         }
 
         connectSignalR();

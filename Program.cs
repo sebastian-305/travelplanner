@@ -11,10 +11,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-var connectionString = builder.Configuration.GetConnectionString("mySqlDb");
-builder.Services.AddDbContext<MySqlDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
-);
+//var connectionString = builder.Configuration.GetConnectionString("mySqlDb");
+//builder.Services.AddDbContext<MySqlDbContext>(options =>
+//    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+//);
 
 
 var app = builder.Build();
