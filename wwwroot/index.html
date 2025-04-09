@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .chat {
+            width: 500px;
+        }
+
+        #chat-messages {
+            height: 600px;
+            background: #efefef;
+            overflow: auto;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background: #dfdfdf;
+            max-width: 55%;
+        }
+
+            .message.self {
+                margin-left: auto;
+                background: #cfcfcf;
+            }
+
+            .message:last-child {
+                border-bottom: none;
+            }
+
+        #post-message-form {
+            display: flex;
+        }
+
+        #post-message {
+            flex-grow: 1;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chat</h1>
+    <div class="chat">
+        <div id="chat-messages"></div>
+    </div>
+
+    <script type="text/javascript" src="/assets/js/microsoft-signalr/signalr.min.js"></script>
+    <script>
+        const chatMessages = document.getElementById("chat-messages")
+
+        function addMessage(message) {
+            const div = document.createElement("div");
+            div.classList.add("message");
+
+
+            div.innerHTML = message;
+            const domDiv = chatMessages.appendChild(div);
+            domDiv.scrollIntoView({ behavior: "smooth" });
+        }
+        function connectSignalR() {
+            // TODO: open signalR connection
+
+            // TODO: use addMessage(message) to add new messages to the chat interface
+        }
+
+        connectSignalR();
+    </script>
+</body>
+</html>
